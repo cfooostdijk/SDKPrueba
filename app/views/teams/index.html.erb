@@ -1,9 +1,17 @@
 <h1>Teams!</h1>
 
-<ul>
-  <% @teams.each do |team| %>
-    <li>
-      <%= team.name.upcase %>
-    </li>
-  <% end %>
-</ul>
+  <div>
+    <table style="width: 50%; text-align:justify">
+      <tr>
+        <th>Name</th>
+        <th>Rating</th>
+      </tr>
+      
+      <% @teams.each do |team| %>
+      <tr> 
+        <td> <%= team.name.upcase %> </td>
+        <td> <%= team.rating %> </td>
+      </tr>
+      <% end %>      
+    </table>
+  </div>
